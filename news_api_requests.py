@@ -16,7 +16,7 @@ def suggested_articles(source,apiKey,sortBy):
     # Send POST request to Google.
     r = requests.get(NEWS_URL, params=params)
 
-    # Check if success, if success, return translated text. If not, return error message.
+    # Check if success, success = return articles; not = return error message.
     if r.status_code != 200:
         return 'Something wrong happened, try again later!'
 
